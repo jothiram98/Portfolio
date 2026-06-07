@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "name": "Jothiram Sanjeevi",
+    "initials": "JS",
+    "title": "Senior Software Engineer",
+    "tagline": "Backend Engineering · System Design · Cloud-Native Architecture",
+    "description": "Senior Software Engineer with 5.5+ years of experience designing and delivering enterprise-grade backend systems. Specializing in distributed systems, cloud infrastructure, API design, and scalable architectures that solve real business problems.",
+    "availability": "Open to senior engineering roles & consulting",
+    "location": "India",
+    "github": "https://github.com/jothiram98"
+  },
+  "stats": [
+    { "value": "5.5+", "label": "Years of Experience" },
+    { "value": "10+", "label": "Enterprise Systems Delivered" },
+    { "value": "Cloud Native", "label": "Azure · AWS · GCP" }
+  ],
+  "quickFacts": [
+    { "label": "Focus", "value": "Backend Systems, Distributed Architecture" },
+    { "label": "Stack", "value": "Python, FastAPI, PostgreSQL, Redis, Docker" },
+    { "label": "Delivery", "value": "Scalable, secure, production-ready systems" }
+  ],
+  "about": {
+    "summary": [
+      "Distributed systems & microservices architecture",
+      "REST & event-driven API design at enterprise scale",
+      "Cloud infrastructure across Azure, AWS, and GCP",
+      "PostgreSQL, Redis, vector databases, and data pipelines",
+      "Docker, Kubernetes, CI/CD, and DevOps automation",
+      "Code quality, system reliability, and performance optimization"
+    ],
+    "optimizeFor": [
+      "Secure systems", "Clear architecture", "High performance", "Fast iteration",
+      "Business outcomes", "Maintainable code", "Reliable deployment", "Scalability"
+    ],
+    "philosophy": "I prefer solutions that fit real operational constraints—engineered for production, not just demos."
+  },
+  "expertise": [
+    {
+      "icon": "⚙️",
+      "title": "Backend Engineering",
+      "description": "Designing and building robust server-side systems with FastAPI, Python, and modern frameworks. Clean API contracts, clear separation of concerns."
+    },
+    {
+      "icon": "🏗️",
+      "title": "System Design",
+      "description": "Architecting distributed, scalable systems. From database schema design to service topology—built for growth and operational clarity."
+    },
+    {
+      "icon": "☁️",
+      "title": "Cloud & DevOps",
+      "description": "Full deployment lifecycle on Azure, AWS, and GCP. Kubernetes, Docker, CI/CD pipelines, and infrastructure-as-code for reliable delivery."
+    },
+    {
+      "icon": "🤖",
+      "title": "AI Integration",
+      "description": "Integrating AI capabilities—RAG pipelines, LLM APIs, vector search—into production backend systems with proper evaluation and observability."
+    }
+  ],
+  "services": [
+    {
+      "title": "Backend Architecture",
+      "description": "End-to-end design and implementation of scalable backend systems: API design, data modeling, service decomposition, and performance tuning.",
+      "tags": ["FastAPI", "Python", "REST", "GraphQL"]
+    },
+    {
+      "title": "Cloud Infrastructure",
+      "description": "Cloud-native deployment, containerization, orchestration, and CI/CD pipelines. Reliable infrastructure that scales with your business.",
+      "tags": ["Azure", "AWS", "Docker", "Kubernetes"]
+    },
+    {
+      "title": "AI & Data Systems",
+      "description": "Integration of AI capabilities into enterprise backends. RAG pipelines, vector search, LLM orchestration, and data engineering.",
+      "tags": ["RAG", "Vector DB", "Python", "Data Pipelines"]
+    }
+  ],
+  "projects": {
+    "disclaimer": "Due to confidentiality agreements and corporate policies, I am unable to publicly showcase several enterprise projects I have worked on. The projects displayed here represent selected work that can be shared publicly.",
+    "items": [
+      {
+        "tag": "Enterprise AI Platform",
+        "title": "Knowledge Retrieval & RAG System",
+        "description": "Built a production-grade Retrieval-Augmented Generation platform enabling accurate, cited answers from large enterprise document corpora.",
+        "bullets": [
+          "Designed hybrid retrieval combining dense vector search (pgvector) with BM25 sparse retrieval, achieving significant improvement in answer relevance",
+          "Implemented a multi-stage reranking pipeline using cross-encoders, reducing hallucination rates in production",
+          "Built a FastAPI service layer with async processing, Redis caching, and observability hooks for enterprise monitoring",
+          "Deployed on Azure Kubernetes Service with autoscaling, supporting concurrent enterprise users"
+        ],
+        "meta": [
+          { "label": "Stack", "value": "FastAPI · pgvector · Redis · Azure" },
+          { "label": "Scale", "value": "Enterprise / Multi-tenant" },
+          { "label": "Domain", "value": "Knowledge Management" },
+          { "label": "Pattern", "value": "RAG · Hybrid Retrieval" }
+        ]
+      },
+      {
+        "tag": "Agentic Automation",
+        "title": "Multi-Agent Workflow Orchestration",
+        "description": "Designed and implemented an agentic orchestration layer enabling LLM-powered workflows to interact with enterprise data sources, APIs, and business logic.",
+        "bullets": [
+          "Engineered a tool-calling framework with structured outputs and retry logic for reliable agent actions",
+          "Implemented stateful agent memory using Redis and PostgreSQL for session continuity across long workflows",
+          "Built a supervisor agent pattern for delegating subtasks to specialized sub-agents, improving task completion rates",
+          "Created comprehensive evaluation harness to benchmark agent correctness, latency, and cost per workflow"
+        ],
+        "meta": [
+          { "label": "Stack", "value": "Python · FastAPI · Redis · PostgreSQL" },
+          { "label": "Pattern", "value": "Multi-Agent · Tool Calling" },
+          { "label": "Domain", "value": "Business Automation" },
+          { "label": "Delivery", "value": "Production · Enterprise" }
+        ]
+      },
+      {
+        "tag": "Backend Systems",
+        "title": "Microservices Platform Migration",
+        "description": "Led the migration of a legacy monolithic backend to a modern microservices architecture, enabling independent deployment and clear ownership boundaries.",
+        "bullets": [
+          "Decomposed a monolith into domain-bounded services communicating via REST and async event queues",
+          "Designed and implemented PostgreSQL schemas per service, with clear data contracts and migration strategies",
+          "Containerized all services with Docker, orchestrated on Kubernetes with proper health checks, resource limits, and rollout strategies",
+          "Established CI/CD pipelines reducing deployment time significantly while improving release reliability"
+        ],
+        "meta": [
+          { "label": "Stack", "value": "Python · PostgreSQL · Docker · K8s" },
+          { "label": "Pattern", "value": "Microservices · Event-Driven" },
+          { "label": "Domain", "value": "Platform Engineering" },
+          { "label": "Cloud", "value": "Azure · GCP" }
+        ]
+      }
+    ]
+  },
+  "stack": [
+    {
+      "title": "Languages & Frameworks",
+      "description": "Core languages and backend frameworks used across production systems.",
+      "chips": ["Python", "FastAPI", "Django", "Flask", "SQL", "Bash"]
+    },
+    {
+      "title": "Data & Storage",
+      "description": "Databases, caching, and vector stores for enterprise-scale data needs.",
+      "chips": ["PostgreSQL", "Redis", "pgvector", "MongoDB", "Elasticsearch"]
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "description": "Cloud platforms, container orchestration, and infrastructure tooling.",
+      "chips": ["Azure", "AWS", "GCP", "Docker", "Kubernetes", "Terraform"]
+    },
+    {
+      "title": "AI & Data Tooling",
+      "description": "Libraries and platforms for building AI-integrated backend systems.",
+      "chips": ["LangChain", "OpenAI API", "HuggingFace", "Pandas", "NumPy"]
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Understand",
+      "description": "Define the problem space, constraints, and business goals before any design decisions are made."
+    },
+    {
+      "step": "02",
+      "title": "Architect",
+      "description": "Design clear system boundaries, data flows, and API contracts with scalability and maintainability in mind."
+    },
+    {
+      "step": "03",
+      "title": "Implement",
+      "description": "Build with production quality: clean code, test coverage, documentation, and observability from day one."
+    },
+    {
+      "step": "04",
+      "title": "Deliver",
+      "description": "Deploy reliably with CI/CD, monitoring, and runbooks. Iterate based on real usage and feedback."
+    }
+  ],
+  "contact": {
+    "github": {
+      "label": "GitHub",
+      "handle": "github.com/jothiram98",
+      "url": "https://github.com/jothiram98"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "handle": "linkedin.com/in/jothiram-sanjeevi",
+      "url": "https://linkedin.com/in/jothiram-sanjeevi"
+    }
+  }
+}
