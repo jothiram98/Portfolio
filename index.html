@@ -622,27 +622,27 @@ const PORTFOLIO = {
   meta: {
     name: "Jothiram Sanjeevi",
     initials: "JS",
-    title: "Senior Software Engineer",
-    tagline: "Backend Engineering · System Design · Cloud-Native Architecture",
-    description: "Senior Software Engineer with 5.5+ years of experience designing and delivering enterprise-grade backend systems. Specializing in distributed systems, cloud infrastructure, API design, and scalable architectures that solve real business problems.",
-    availability: "Open to senior engineering roles & consulting",
+    title: "AI Architect & Developer",
+    tagline: "AI Architecture · Agentic Systems · RAG · Enterprise Solutions",
+    description: "AI Architect & Developer with 5.5+ years of experience designing and delivering enterprise-grade AI systems. Specializing in agentic workflows, RAG architectures, cloud-native backends, and business automation that solves real operational problems.",
+    availability: "Available for consulting, collaborations, and product builds",
     location: "India",
     github: "https://github.com/jothiram98"
   },
   stats: [
-    { value: "5.5+",         label: "Years of Experience" },
-    { value: "10+",          label: "Enterprise Systems Delivered" },
-    { value: "Cloud Native", label: "Azure · AWS · GCP" }
+    { value: "5.5+",         label: "Years of hands-on AI delivery" },
+    { value: "10+",          label: "Enterprise systems shaped" },
+    { value: "AI + Cloud",   label: "Azure · AWS · GCP · FastAPI" }
   ],
   quickFacts: [
-    { label: "Focus",    value: "Backend Systems, Distributed Architecture" },
-    { label: "Stack",    value: "Python, FastAPI, PostgreSQL, Redis, Docker" },
-    { label: "Delivery", value: "Scalable, secure, production-ready systems" }
+    { label: "Focus",    value: "AI Architecture, Agentic Workflows, RAG" },
+    { label: "Stack",    value: "Python, FastAPI, PostgreSQL, Redis, Azure" },
+    { label: "Delivery", value: "Production-ready systems with measurable impact" }
   ],
   about: {
     summary: [
-      "Distributed systems & microservices architecture",
-      "REST & event-driven API design at enterprise scale",
+      "AI architecture and enterprise system design",
+      "Agentic workflows and RAG-driven applications",
       "Cloud infrastructure across Azure, AWS, and GCP",
       "PostgreSQL, Redis, vector databases, and data pipelines",
       "Docker, Kubernetes, CI/CD, and DevOps automation",
@@ -652,21 +652,21 @@ const PORTFOLIO = {
       "Secure systems","Clear architecture","High performance","Fast iteration",
       "Business outcomes","Maintainable code","Reliable deployment","Scalability"
     ],
-    philosophy: "I prefer solutions that fit real operational constraints—engineered for production, not just demos."
+    philosophy: "I design AI solutions that fit real operational constraints—engineered for production, not just demos."
   },
   expertise: [
-    { icon: "⚙️", title: "Backend Engineering",
-      description: "Designing and building robust server-side systems with FastAPI, Python, and modern frameworks. Clean API contracts, clear separation of concerns." },
+    { icon: "⚙️", title: "AI Architecture",
+      description: "Designing production-grade AI systems with clear patterns, clean boundaries, and dependable delivery." },
     { icon: "🏗️", title: "System Design",
-      description: "Architecting distributed, scalable systems. From database schema design to service topology—built for growth and operational clarity." },
+      description: "Architecting distributed, scalable systems. From data flow to service topology—built for growth and operational clarity." },
     { icon: "☁️", title: "Cloud & DevOps",
       description: "Full deployment lifecycle on Azure, AWS, and GCP. Kubernetes, Docker, CI/CD pipelines, and infrastructure-as-code for reliable delivery." },
     { icon: "🤖", title: "AI Integration",
-      description: "Integrating AI capabilities—RAG pipelines, LLM APIs, vector search—into production backend systems with proper evaluation and observability." }
+      description: "Integrating AI capabilities—RAG pipelines, LLM APIs, vector search—into production systems with proper evaluation and observability." }
   ],
   services: [
-    { title: "Backend Architecture",
-      description: "End-to-end design and implementation of scalable backend systems: API design, data modeling, service decomposition, and performance tuning.",
+    { title: "AI Product Architecture",
+      description: "End-to-end design and implementation of scalable AI systems: orchestration, data modeling, service decomposition, and performance tuning.",
       tags: ["FastAPI","Python","REST","GraphQL"] },
     { title: "Cloud Infrastructure",
       description: "Cloud-native deployment, containerization, orchestration, and CI/CD pipelines. Reliable infrastructure that scales with your business.",
@@ -676,7 +676,7 @@ const PORTFOLIO = {
       tags: ["RAG","Vector DB","Python","Data Pipelines"] }
   ],
   projects: {
-    disclaimer: "Due to confidentiality agreements and corporate policies, I am unable to publicly showcase several enterprise projects I have worked on. The projects displayed here represent selected work that can be shared publicly.",
+    disclaimer: "The projects below are presented to showcase my ability to design and deliver enterprise AI systems while respecting confidentiality boundaries.",
     items: [
       {
         tag: "Enterprise AI Platform",
@@ -756,8 +756,8 @@ const PORTFOLIO = {
       description: "Deploy reliably with CI/CD, monitoring, and runbooks. Iterate based on real usage and feedback." }
   ],
   contact: [
-    { label: "GitHub",   handle: "github.com/jothiram98",             url: "https://github.com/jothiram98" },
-    { label: "LinkedIn", handle: "linkedin.com/in/jothiram-sanjeevi", url: "https://linkedin.com/in/jothiram-sanjeevi" }
+      { label: "GitHub",   handle: "github.com/jothiram98",             url: "https://github.com/jothiram98" },
+      { label: "LinkedIn", handle: "linkedin.com/in/jothiram-sanjeevi", url: "https://linkedin.com/in/jothiram-sanjeevi" }
   ]
 };
 
@@ -787,8 +787,8 @@ function renderHero() {
     <p class="hero-title">${h(meta.title)}</p>
     <p class="hero-desc">${h(meta.description)}</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#projects">View Projects</a>
-      <a class="btn btn-ghost" href="#contact">Let's Connect</a>
+      <a class="btn btn-primary" href="#projects">View Work</a>
+      <a class="btn btn-ghost" href="#contact">Let's Collaborate</a>
       <a class="btn btn-ghost" href="${h(meta.github)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
     </div>
     <div class="hero-stats" role="list">
@@ -819,8 +819,8 @@ function renderAbout() {
   const { about } = PORTFOLIO;
   set('about-section', `
     <p class="section-kicker">About</p>
-    <h2 class="section-title">Engineering with purpose <span class="section-title-accent">and precision.</span></h2>
-    <p class="section-desc">My background spans backend engineering, distributed systems, cloud infrastructure, and AI integration. I care about reliability, maintainability, and building systems that genuinely work inside real organizations.</p>
+    <h2 class="section-title">Building AI systems with purpose <span class="section-title-accent">and precision.</span></h2>
+    <p class="section-desc">My background spans AI architecture, agentic systems, cloud infrastructure, and enterprise integration. I care about reliability, maintainability, and building systems that genuinely work inside real organizations.</p>
     <div class="two-col-grid">
       <div class="panel">
         <h3 class="panel-title">Professional scope</h3>
@@ -860,8 +860,8 @@ function renderExpertise() {
 function renderServices() {
   set('services-section', `
     <p class="section-kicker">Services</p>
-    <h2 class="section-title">How I can <span class="section-title-accent">help</span></h2>
-    <p class="section-desc">Focused engagements across the engineering disciplines I do best.</p>
+    <h2 class="section-title">How I can <span class="section-title-accent">contribute</span></h2>
+    <p class="section-desc">Focused AI architecture and development capabilities I bring to product and enterprise teams.</p>
     <div class="three-grid">
       ${PORTFOLIO.services.map(s => `
         <div class="service-card">
@@ -957,7 +957,7 @@ function renderContact() {
   const { contact, meta } = PORTFOLIO;
   set('contact-section', `
     <p class="section-kicker">Contact</p>
-    <h2 class="section-title">Let's <span class="section-title-accent">connect</span></h2>
+    <h2 class="section-title">Let's <span class="section-title-accent">collaborate</span></h2>
     <div class="contact-grid">
       <div class="contact-main">
         <div class="contact-links">
@@ -978,7 +978,7 @@ function renderContact() {
         </div>
         <div class="contact-note">
           <h4 class="contact-note-title">Location</h4>
-          <p class="contact-note-text">${h(meta.location)} — open to remote and hybrid opportunities globally.</p>
+          <p class="contact-note-text">${h(meta.location)} — open to remote and hybrid collaborations globally.</p>
         </div>
       </div>
     </div>
