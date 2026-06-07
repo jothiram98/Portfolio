@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jothiram Sanjeevi | AI Engineer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Jothiram Sanjeevi, AI Engineer specializing in Agentic AI, RAG systems, and enterprise AI solutions."
+    />
+    <style>
+      :root {
+        --bg: #07111f;
+        --bg-soft: rgba(255, 255, 255, 0.04);
+        --bg-card: rgba(10, 18, 33, 0.78);
+        --text: #edf3ff;
+        --muted: rgba(237, 243, 255, 0.72);
+        --muted-2: rgba(237, 243, 255, 0.56);
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #7dd3fc;
+        --accent-2: #8b5cf6;
+        --accent-3: #22c55e;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        --radius-xl: 28px;
+        --radius-lg: 20px;
+        --radius-md: 16px;
+        --radius-sm: 12px;
+        --content-width: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(125, 211, 252, 0.18), transparent 24%),
+          radial-gradient(circle at top right, rgba(139, 92, 246, 0.2), transparent 22%),
+          radial-gradient(circle at 80% 70%, rgba(34, 197, 94, 0.08), transparent 18%),
+          linear-gradient(180deg, #081120 0%, #050b15 100%);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 54px 54px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.22), transparent 72%);
+        opacity: 0.25;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .shell {
+        width: min(calc(100% - 32px), var(--content-width));
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(20px);
+        background: rgba(5, 11, 21, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-family: "Sora", "IBM Plex Sans", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(139, 92, 246, 0.95));
+        color: #03111d;
+        box-shadow: 0 16px 40px rgba(125, 211, 252, 0.25);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .nav a {
+        position: relative;
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 180ms ease;
+      }
+
+      .nav a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .hero {
+        padding: 84px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .hero-copy,
+      .hero-card,
+      .section-card,
+      .project-card,
+      .contact-card {
+        background: var(--bg-card);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero-copy {
+        border-radius: var(--radius-xl);
+        padding: 40px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-copy::before {
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        right: -120px;
+        top: -120px;
+        background: radial-gradient(circle, rgba(125, 211, 252, 0.16), transparent 64%);
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(125, 211, 252, 0.24);
+        background: rgba(125, 211, 252, 0.08);
+        color: var(--accent);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        width: fit-content;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "SF Pro Display", "Avenir Next", "Segoe UI", sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 8vw, 5.8rem);
+        line-height: 0.95;
+        margin-top: 22px;
+        max-width: 12ch;
+      }
+
+      .hero-subtitle {
+        margin-top: 18px;
+        font-size: clamp(1.05rem, 2vw, 1.28rem);
+        line-height: 1.7;
+        color: var(--muted);
+        max-width: 62ch;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 20px;
+        border-radius: 14px;
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        border: 1px solid transparent;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        color: #03111d;
+        background: linear-gradient(135deg, #7dd3fc, #a78bfa);
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .meta-tile {
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 16px;
+      }
+
+      .meta-value {
+        font-family: "Sora", "IBM Plex Sans", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #f8fbff;
+      }
+
+      .meta-label {
+        margin-top: 6px;
+        color: var(--muted-2);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        font-size: 0.9rem;
+      }
+
+      .hero-card {
+        border-radius: var(--radius-xl);
+        padding: 28px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .profile-panel {
+        border-radius: 24px;
+        padding: 28px;
+        background:
+          linear-gradient(160deg, rgba(125, 211, 252, 0.12), rgba(139, 92, 246, 0.12)),
+          radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 36%);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .profile-panel::after {
+        content: "";
+        position: absolute;
+        inset: auto -40px -60px auto;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(34, 197, 94, 0.3), transparent 72%);
+      }
+
+      .profile-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(5, 11, 21, 0.48);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .avatar {
+        width: 92px;
+        height: 92px;
+        border-radius: 26px;
+        background: linear-gradient(135deg, #7dd3fc, #a78bfa 45%, #22c55e);
+        display: grid;
+        place-items: center;
+        color: #03111d;
+        font-family: "Sora", "IBM Plex Sans", sans-serif;
+        font-size: 2rem;
+        font-weight: 900;
+        box-shadow: 0 18px 50px rgba(125, 211, 252, 0.22);
+      }
+
+      .profile-copy h3 {
+        font-size: 1.7rem;
+        margin-top: 14px;
+      }
+
+      .profile-copy p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      }
+
+      .quick-facts {
+        display: grid;
+        gap: 12px;
+      }
+
+      .fact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      }
+
+      .fact span {
+        color: var(--muted-2);
+      }
+
+      section {
+        padding: 18px 0 26px;
+      }
+
+      .section-card {
+        border-radius: var(--radius-xl);
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at top right, rgba(125, 211, 252, 0.08), transparent 28%),
+          radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.06), transparent 26%);
+        pointer-events: none;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 22px;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 66ch;
+        line-height: 1.7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .section-title {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+
+      .about-grid,
+      .expertise-grid,
+      .projects-grid,
+      .contact-grid,
+      .services-grid,
+      .stack-grid,
+      .process-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .about-panel,
+      .expertise-panel,
+      .service-card,
+      .stack-card,
+      .process-card,
+      .project-card,
+      .contact-card {
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 22px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .list li {
+        position: relative;
+        padding-left: 22px;
+        line-height: 1.6;
+        color: var(--muted);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      }
+
+      .list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      }
+
+      .pill-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 0.93rem;
+      }
+
+      .expertise-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .expertise-panel h3,
+      .project-card h3,
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .expertise-panel p,
+      .project-card p,
+      .contact-card p {
+        color: var(--muted);
+        line-height: 1.65;
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      }
+
+      .project-card {
+        display: grid;
+        gap: 18px;
+      }
+
+      .project-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 14px;
+      }
+
+      .project-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: var(--accent);
+        background: rgba(125, 211, 252, 0.08);
+        border: 1px solid rgba(125, 211, 252, 0.18);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .project-bullets {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .project-bullets li {
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      .project-columns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .contact-card {
+        display: grid;
+        gap: 18px;
+      }
+
+      .contact-links {
+        display: grid;
+        gap: 12px;
+      }
+
+      .contact-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 18px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      }
+
+      .footer {
+        padding: 26px 0 40px;
+        color: var(--muted-2);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        text-align: center;
+      }
+
+      .kicker {
+        color: var(--accent);
+        font-family: "SF Pro Display", "Avenir Next", "Segoe UI", sans-serif;
+        font-size: 0.84rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-stack {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .highlight-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 18px;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(125, 211, 252, 0.08), rgba(139, 92, 246, 0.08));
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--muted);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .highlight-banner strong {
+        color: var(--text);
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--muted);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 0.88rem;
+      }
+
+      .service-card h3,
+      .stack-card h3,
+      .process-card h3 {
+        font-size: 1.18rem;
+      }
+
+      .service-card p,
+      .stack-card p,
+      .process-card p,
+      .expertise-panel p {
+        color: var(--muted);
+        line-height: 1.65;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card-number {
+        display: inline-grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        margin-bottom: 16px;
+        background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(139, 92, 246, 0.18));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--text);
+        font-family: "SF Pro Display", "Avenir Next", "Segoe UI", sans-serif;
+        font-weight: 700;
+      }
+
+      .stack-chip-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .stack-chip {
+        display: inline-flex;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 0.9rem;
+      }
+
+      .project-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .project-meta {
+        padding: 14px 15px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .project-meta span {
+        display: block;
+        color: var(--muted-2);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 6px;
+      }
+
+      .project-meta strong {
+        color: var(--text);
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .callout {
+        margin: 18px 0 0;
+        padding: 18px 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(125, 211, 252, 0.18);
+        background: linear-gradient(135deg, rgba(125, 211, 252, 0.08), rgba(34, 197, 94, 0.06));
+        color: var(--muted);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .callout strong {
+        color: var(--text);
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition:
+          opacity 480ms ease,
+          transform 480ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      .section-card > *,
+      .hero-copy > *,
+      .hero-card > *,
+      .about-panel > *,
+      .expertise-panel > *,
+      .service-card > *,
+      .stack-card > *,
+      .process-card > *,
+      .project-card > *,
+      .contact-card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .about-grid,
+        .expertise-grid,
+        .services-grid,
+        .stack-grid,
+        .process-grid,
+        .project-columns,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 42px;
+        }
+
+        .hero-copy,
+        .hero-card,
+        .section-card {
+          padding: 24px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: min(calc(100% - 22px), var(--content-width));
+        }
+
+        .topbar-inner {
+          padding: 14px 0;
+        }
+
+        .brand {
+          font-size: 0.8rem;
+        }
+
+        h1 {
+          font-size: clamp(2.5rem, 15vw, 4rem);
+        }
+
+        .hero-meta {
+          grid-template-columns: 1fr;
+        }
+
+        .section-head {
+          flex-direction: column;
+          align-items: start;
+        }
+
+        .profile-panel {
+          min-height: 240px;
+        }
+
+        .project-meta-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .highlight-banner {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <div class="brand" aria-label="Jothiram Sanjeevi">
+          <span class="brand-mark">JS</span>
+          <span>Jothiram Sanjeevi</span>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#stack">Stack</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">AI Engineer | Agentic AI | RAG Systems | Enterprise AI Solutions</div>
+            <h1>Building AI systems that turn enterprise complexity into clear outcomes.</h1>
+            <p class="hero-subtitle">
+              I am an AI Engineer with 5.5+ years of experience designing and delivering enterprise software
+              solutions. I specialize in Retrieval-Augmented Generation, AI agents, cloud-native systems, and
+              business automation that integrates cleanly with existing workflows.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Let's Work Together</a>
+              <a class="btn btn-secondary" href="#contact">Download Resume</a>
+            </div>
+
+            <div class="hero-stack">
+              <div class="highlight-banner">
+                <div>
+                  <strong>Senior AI Engineer / AI Solutions Architect</strong>
+                  <div>Production-minded systems built for secure enterprise environments.</div>
+                </div>
+                <div class="tag-row">
+                  <span class="tag">RAG</span>
+                  <span class="tag">Agents</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Azure</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-meta" aria-label="Highlights">
+              <div class="meta-tile">
+                <div class="meta-value">5.5+ Years</div>
+                <div class="meta-label">Enterprise software and AI delivery</div>
+              </div>
+              <div class="meta-tile">
+                <div class="meta-value">RAG + Agents</div>
+                <div class="meta-label">Grounded AI workflows with citations</div>
+              </div>
+              <div class="meta-tile">
+                <div class="meta-value">Cloud Native</div>
+                <div class="meta-label">FastAPI, Azure, AWS, GCP, Docker, K8s</div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-card reveal">
+            <div class="profile-panel">
+              <div>
+                <div class="profile-badge">Available for select consulting and product work</div>
+                <div class="avatar" aria-hidden="true">JS</div>
+                <div class="profile-copy">
+                  <h3>Enterprise AI solutions with architecture, impact, and trust.</h3>
+                  <p>
+                    From knowledge platforms to workflow automation and analytics, I focus on the full lifecycle:
+                    architecture, implementation, evaluation, and deployment.
+                  </p>
+                </div>
+              </div>
+              <div class="kicker">Senior AI Engineer Profile</div>
+            </div>
+
+            <div class="quick-facts">
+              <div class="fact">
+                <strong>Focus</strong>
+                <span>Agentic AI, RAG, LLM apps, integrations</span>
+              </div>
+              <div class="fact">
+                <strong>Stack</strong>
+                <span>Python, FastAPI, Redis, PostgreSQL, Azure</span>
+              </div>
+              <div class="fact">
+                <strong>Delivery</strong>
+                <span>Scalable, secure, production-ready systems</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">About</div>
+              <h2 class="section-title">I build end-to-end AI solutions for enterprise environments.</h2>
+            </div>
+            <p>
+              My background spans AI agents, RAG systems, backend engineering, cloud infrastructure, and business
+              automation. I care about reliability, maintainability, and making advanced AI genuinely useful inside
+              existing organizations.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-panel">
+              <h3>Professional Summary</h3>
+              <ul class="list">
+                <li>AI Agents and multi-agent workflows</li>
+                <li>RAG architectures with retrieval, reranking, and citations</li>
+                <li>LLM applications, prompt engineering, and evaluation frameworks</li>
+                <li>FastAPI, microservices, event-driven systems, and enterprise integrations</li>
+                <li>Cloud deployments across Azure, AWS, and GCP</li>
+                <li>Docker, Kubernetes, CI/CD, PostgreSQL, Redis, and vector search</li>
+              </ul>
+            </div>
+
+            <div class="about-panel">
+              <h3>What I optimize for</h3>
+              <div class="pill-grid" style="margin-top: 16px">
+                <span class="pill">Secure systems</span>
+                <span class="pill">Clear architecture</span>
+                <span class="pill">Grounded answers</span>
+                <span class="pill">Fast iteration</span>
+                <span class="pill">Business outcomes</span>
+                <span class="pill">Maintainable code</span>
+                <span class="pill">Reliable deployment</span>
+                <span class="pill">User trust</span>
+              </div>
+              <p style="margin-top: 20px">
+                I prefer solutions that fit real operational constraints instead of research demos that break under
+                enterprise load.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Expertise</div>
+              <h2 class="section-title">A broad stack, organized around production delivery.</h2>
+            </div>
+            <p>
+              The design goal here is to make your portfolio feel like a senior AI solutions architect, not a generic
+              freelancer page.
+            </p>
+          </div>
+
+          <div class="expertise-grid">
+            <div class="expertise-panel">
+              <h3>AI Engineering</h3>
+              <p>Agentic AI, multi-agent systems, RAG architectures, LLM apps, prompt engineering, fine-tuning, and evaluation.</p>
+            </div>
+            <div class="expertise-panel">
+              <h3>Backend Engineering</h3>
+              <p>Python, FastAPI, REST APIs, microservices, and event-driven workflows built for enterprise scale.</p>
+            </div>
+            <div class="expertise-panel">
+              <h3>Cloud & Infrastructure</h3>
+              <p>Azure, AWS, GCP, Docker, Kubernetes, and CI/CD pipelines for secure, repeatable delivery.</p>
+            </div>
+            <div class="expertise-panel">
+              <h3>Data & Search</h3>
+              <p>PostgreSQL, Redis, Elasticsearch, Azure AI Search, vector databases, hybrid retrieval, and ranking.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Services</div>
+              <h2 class="section-title">The kinds of AI work I can help you ship.</h2>
+            </div>
+            <p>
+              This section is framed the way higher-value consulting pages usually are: business problem first, then
+              the system I would build.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>AI Agent Development</h3>
+              <p>Design and implement agentic systems, multi-agent workflows, and tool-using assistants for real operations.</p>
+            </article>
+            <article class="service-card">
+              <h3>RAG Systems</h3>
+              <p>Build grounded knowledge experiences with chunking, retrieval, reranking, citations, and secure access control.</p>
+            </article>
+            <article class="service-card">
+              <h3>Enterprise Chatbots</h3>
+              <p>Create secure conversational interfaces that integrate with internal systems and business rules.</p>
+            </article>
+            <article class="service-card">
+              <h3>Text-to-SQL Solutions</h3>
+              <p>Turn natural language questions into validated database queries and business-ready insights.</p>
+            </article>
+            <article class="service-card">
+              <h3>Workflow Automation</h3>
+              <p>Automate repetitive operations across email, procurement, knowledge management, and approval flows.</p>
+            </article>
+            <article class="service-card">
+              <h3>Cloud Deployments</h3>
+              <p>Ship AI products with FastAPI, Docker, Kubernetes, and CI/CD pipelines that hold up in production.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Featured Work</div>
+              <h2 class="section-title">Case studies framed around business problem, architecture, and impact.</h2>
+            </div>
+            <p>
+              This keeps the portfolio aligned with senior-level enterprise work, rather than a long list of tools.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-top">
+                <div>
+                  <div class="project-tag">Project 01</div>
+                  <h3 style="margin-top: 12px">Enterprise Knowledge Intelligence Platform</h3>
+                </div>
+                <div class="project-tag" style="color: var(--accent-3); border-color: rgba(34, 197, 94, 0.18); background: rgba(34, 197, 94, 0.08);">
+                  Lead AI Engineer
+                </div>
+              </div>
+              <p>
+                Built a production-grade RAG system that helps business users search internal documentation and get
+                grounded answers with citations.
+              </p>
+              <div class="project-meta-grid">
+                <div class="project-meta">
+                  <span>Challenge</span>
+                  <strong>Business users needed instant access to internal knowledge across thousands of documents and procedures.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Architecture</span>
+                  <strong>Document processing, semantic chunking, embeddings, Azure AI Search, hybrid retrieval, reranking, caching, and memory.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Technology Stack</span>
+                  <strong>Python, FastAPI, Azure OpenAI, Azure AI Search, Redis, PostgreSQL, Docker, Azure Cloud.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Business Impact</span>
+                  <strong>Reduced retrieval time from minutes to seconds while delivering grounded answers with citations.</strong>
+                </div>
+              </div>
+              <ul class="project-bullets">
+                <li><strong>Role:</strong> Lead AI Engineer</li>
+                <li><strong>Key Features:</strong> Hybrid search, cross-encoder reranking, response caching, conversation context, citation support, access control.</li>
+              </ul>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <div>
+                  <div class="project-tag">Project 02</div>
+                  <h3 style="margin-top: 12px">AI-Powered Invoice Operations Assistant</h3>
+                </div>
+                <div class="project-tag" style="color: var(--accent-3); border-color: rgba(34, 197, 94, 0.18); background: rgba(34, 197, 94, 0.08);">
+                  Automation
+                </div>
+              </div>
+              <p>
+                Built an AI-powered email assistant integrated with Outlook that analyzes vendor communications,
+                retrieves invoice-related information, and drafts contextual responses with human approval.
+              </p>
+              <div class="project-meta-grid">
+                <div class="project-meta">
+                  <span>Challenge</span>
+                  <strong>Operations teams were spending significant time manually answering invoice and procurement questions.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Architecture</span>
+                  <strong>Email monitoring, document retrieval, business rules, RAG pipeline, response generation, human approval.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Technology Stack</span>
+                  <strong>Python, FastAPI, Microsoft Graph API, Azure OpenAI, PostgreSQL, Redis, Azure Functions.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Business Impact</span>
+                  <strong>Reduced response preparation time and improved consistency in vendor communication.</strong>
+                </div>
+              </div>
+              <ul class="project-bullets">
+                <li><strong>Role:</strong> AI Engineer</li>
+                <li><strong>Key Features:</strong> Vendor query classification, invoice information retrieval, automated response drafting, human-in-the-loop approval, audit logging.</li>
+              </ul>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <div>
+                  <div class="project-tag">Project 03</div>
+                  <h3 style="margin-top: 12px">Natural Language Analytics Platform</h3>
+                </div>
+                <div class="project-tag" style="color: var(--accent-3); border-color: rgba(34, 197, 94, 0.18); background: rgba(34, 197, 94, 0.08);">
+                  Lead AI Engineer
+                </div>
+              </div>
+              <p>
+                Developed a text-to-SQL platform that lets business users ask questions in natural language and receive
+                actionable insights without writing SQL.
+              </p>
+              <div class="project-meta-grid">
+                <div class="project-meta">
+                  <span>Challenge</span>
+                  <strong>Business stakeholders relied on data teams for analytical insights and SQL query creation.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Architecture</span>
+                  <strong>Natural language interface, schema understanding, query planning, SQL generation, validation, insight generation, visualization.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Technology Stack</span>
+                  <strong>Python, FastAPI, LangGraph, PostgreSQL, Azure OpenAI, Power BI, Redis.</strong>
+                </div>
+                <div class="project-meta">
+                  <span>Business Impact</span>
+                  <strong>Enabled non-technical users to access analytical insights without writing SQL.</strong>
+                </div>
+              </div>
+              <ul class="project-bullets">
+                <li><strong>Key Features:</strong> Text-to-SQL generation, query validation, business insight generation, interactive dashboards, data visualization.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Tech Stack</div>
+              <h2 class="section-title">The tools and platforms I reach for most often.</h2>
+            </div>
+            <p>
+              The point here is not to look exhaustive. It’s to show a believable, focused stack for enterprise AI work.
+            </p>
+          </div>
+
+          <div class="stack-grid">
+            <article class="stack-card">
+              <h3>AI and Orchestration</h3>
+              <p>OpenAI, Anthropic, LangGraph, LangChain, Hugging Face</p>
+              <div class="stack-chip-grid">
+                <span class="stack-chip">Agentic AI</span>
+                <span class="stack-chip">RAG</span>
+                <span class="stack-chip">Fine-tuning</span>
+                <span class="stack-chip">Evaluation</span>
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3>Backend and Data</h3>
+              <p>Python, FastAPI, PostgreSQL, Redis, Elasticsearch, Azure AI Search</p>
+              <div class="stack-chip-grid">
+                <span class="stack-chip">REST APIs</span>
+                <span class="stack-chip">Microservices</span>
+                <span class="stack-chip">Hybrid Search</span>
+                <span class="stack-chip">Vector DBs</span>
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3>Cloud and Delivery</h3>
+              <p>Azure, AWS, GCP, Docker, Kubernetes, GitHub Actions</p>
+              <div class="stack-chip-grid">
+                <span class="stack-chip">Cloud Deployments</span>
+                <span class="stack-chip">CI/CD</span>
+                <span class="stack-chip">Containers</span>
+                <span class="stack-chip">Observability</span>
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3>Enterprise Experience</h3>
+              <p>Secure integrations, workflow automation, internal tools, and systems built for organizational trust.</p>
+              <div class="stack-chip-grid">
+                <span class="stack-chip">Approval flows</span>
+                <span class="stack-chip">Audit logs</span>
+                <span class="stack-chip">Access control</span>
+                <span class="stack-chip">Human-in-the-loop</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Process</div>
+              <h2 class="section-title">A delivery process built for trust and clarity.</h2>
+            </div>
+            <p>
+              This is the part that reassures senior buyers. It signals that your work is structured, not improvised.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <div class="card-number">01</div>
+              <h3>Discover</h3>
+              <p>Understand the business problem, current workflow, constraints, stakeholders, and success criteria.</p>
+            </article>
+            <article class="process-card">
+              <div class="card-number">02</div>
+              <h3>Architect</h3>
+              <p>Design the system, retrieval strategy, orchestration flow, integrations, and security model.</p>
+            </article>
+            <article class="process-card">
+              <div class="card-number">03</div>
+              <h3>Build</h3>
+              <p>Implement the backend, prompts, data flow, retrieval components, and evaluation checkpoints.</p>
+            </article>
+            <article class="process-card">
+              <div class="card-number">04</div>
+              <h3>Deploy</h3>
+              <p>Ship to production with testing, observability, CI/CD, and a plan for iteration and support.</p>
+            </article>
+          </div>
+
+          <div class="callout">
+            <strong>Positioning note:</strong> the strongest portfolios explain the business problem, system design, and outcome
+            instead of simply listing tools. That’s the story this version is built to tell.
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="shell section-card reveal">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Contact</div>
+              <h2 class="section-title">Make it easy for people to start a conversation.</h2>
+            </div>
+            <p>
+              Replace the placeholders below with your real contact details and links when you’re ready to publish.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Let’s build something production-ready.</h3>
+              <p>
+                If you’re looking for someone who can design AI systems end-to-end, integrate them into existing
+                workflows, and ship them with an enterprise mindset, this is the right place.
+              </p>
+              <div class="cta-row" style="margin-top: 6px">
+                <a class="btn btn-primary" href="mailto:your-email@example.com">Email Me</a>
+                <a class="btn btn-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <h3>Quick links</h3>
+              <div class="contact-links">
+                <a class="contact-link" href="mailto:your-email@example.com">
+                  <span>Email</span>
+                  <span>your-email@example.com</span>
+                </a>
+                <a class="contact-link" href="https://github.com" target="_blank" rel="noreferrer">
+                  <span>GitHub</span>
+                  <span>View profile</span>
+                </a>
+                <a class="contact-link" href="#stack">
+                  <span>Location</span>
+                  <span>India</span>
+                </a>
+                <a class="contact-link" href="#projects">
+                  <span>Projects</span>
+                  <span>Scroll up</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <div>Designed for Jothiram Sanjeevi · <span id="year"></span></div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
